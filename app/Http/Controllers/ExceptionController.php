@@ -10,7 +10,7 @@ class ExceptionController extends Controller
 {
     public function create(Request $request)
     {
-        $site = Site::where('uuid', $request->get('uuid'))->firstOrFailt();
+        $site = Site::where('uuid', $request->get('uuid'))->firstOrFail();
 
         Exception::create([
             'site_id' => $site->id,
